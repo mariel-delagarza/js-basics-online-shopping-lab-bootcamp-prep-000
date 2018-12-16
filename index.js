@@ -59,7 +59,7 @@ function getRandomNumber() {
 
 function generateItem(item) {
   return {
-    itemName: item
+    itemName: item,
     itemPrice: getRandomNumber
   }
 }
