@@ -29,9 +29,9 @@ function total() {
  return sum
 }
 
-function removeFromCart(item) {
-  var itemToRemove = searchCart(item)
-  return itemToRemove ? removeItemFromCart(item) : nothingToRemove()// write your code here
+function removeFromCart(itemName) {
+  var itemToRemove = searchCart(itemName)
+  return itemToRemove ? removeItemFromCart(itemToRemove) : nothingToRemove()// write your code here
 }
 
 function placeOrder(cardNumber) {
