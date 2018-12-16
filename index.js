@@ -44,7 +44,8 @@ function placeOrder(cardNumber) {
   }
 }
 
-// These functions below help the code above be shorter and easier to read
+// These functions below help the code above be shorter and easier to read. 
+// Note that to interpolate in JS, you need to use backticks: ` v. '
 
 // First, we create a function to get a random number for the price.
 // Math.floor will round the number down to the nearest/largest integer,
@@ -70,16 +71,16 @@ function generateItem(item) {
 function generateCartDescription() {
   var cartDescription = 'In your cart, you have'
   if (getCart().length >=1) {
-    cartDescription += '$getCart()[0].itemName} at $${getCart()[0].itemPrice}'
+    cartDescription += `${getCart()[0].itemName} at $${getCart()[0].itemPrice}`
   }
   if (getCart().length >=2) {
     var otherStuff = ''
     for (var i=1; i<getCart().length -1; i++) {
-      otherStuff += ', ${getCart()[i].itemName} at ${getCart()[i].itemPrice}'
+      otherStuff += `, ${getCart()[i].itemName} at ${getCart()[i].itemPrice}`
     }
-    cartDescription += '${otherStuff}, and ${getCart()[getCart().length-1].itemName} at $${getCart()[getCart().length-1].itemPrice}'
+    cartDescription += `${otherStuff}, and ${getCart()[getCart().length-1].itemName} at $${getCart()[getCart().length-1].itemPrice}`
   }
-  return '${cartDescription}.'
+  return `${cartDescription}.`
 }
 
 // Now we need two functions: one to see if an item is in the cart and another
