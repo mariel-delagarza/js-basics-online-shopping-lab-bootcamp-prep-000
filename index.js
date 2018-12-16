@@ -44,7 +44,7 @@ function placeOrder(cardNumber) {
   }
 }
 
-// These functions below help the code above be shorter and easier to read. 
+// These functions below help the code above be shorter and easier to read.
 // Note that to interpolate in JS, you need to use backticks: ` v. '
 
 // First, we create a function to get a random number for the price.
