@@ -26,7 +26,7 @@ function total() {
  for (var i = 0; i<getCart().length; i++) {
    sum = sum + getCart()[i].itemPrice
  }
- return sum 
+ return sum
 }
 
 function removeFromCart(item) {
@@ -41,12 +41,12 @@ function placeOrder(cardNumber) {
     var sumToCharge = total()
     setCart([])
     return 'Your total cost is ${sumToCharge}, which will be charged to the card ${cardNumber}.'
-  } 
-} 
+  }
+}
 
 // These functions below help the code above be shorter and easier to read
 
-// First, we create a function to get a random number for the price. 
+// First, we create a function to get a random number for the price.
 // Math.floor will round the number down to the nearest/largest integer,
 // and math.random will give us a number from 0 to 1, inclusive of 0.
 
@@ -54,17 +54,17 @@ function getRandomNumber() {
   return Math.floor(Math.random() * 100) + 1;
 }
 
-// Next, we create a function that will give us a cart item that we can 
+// Next, we create a function that will give us a cart item that we can
 // add to our cart. This means we need a price and an item name.
 
 function generateItem(item) {
   return {
-    itemName: item 
-    itemPrice: getRandomNumber 
+    itemName: item
+    itemPrice: getRandomNumber
   }
 }
 
-// Next, we will generate the cart description. This puts your cart 
+// Next, we will generate the cart description. This puts your cart
 // together in parts. If you have 1 item, if you have 2+ items, etc.
 
 function generateCartDescription() {
@@ -78,9 +78,9 @@ function generateCartDescription() {
       otherStuff += ', ${getCart()[i].itemName} at ${getCart()[i].itemPrice}'
     }
     cartDescription += '${otherStuff}, and ${getCart()[getCart().length-1].itemName} at ${getCart()[getCart().length-1].itemPrice}'
-  } 
+  }
   return '${cartDescription}.'
-} 
+}
 
 // Now we need two functions: one to see if an item is in the cart and another
 // to tell the user there is nothing to take out of the cart.
